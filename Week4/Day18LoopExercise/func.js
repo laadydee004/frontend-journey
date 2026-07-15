@@ -256,3 +256,32 @@ for(let i = 0; i < catalog.length; i++){
 }
 console.log(oldestYear)
 console.log(newestYear)
+
+
+// find the largest word
+function findLongestWordLength(sentence){
+  let words = sentence.split(" ")
+let longestLength = 0
+  for(const word of words){
+    if(word.length > longestLength){
+      longestLength = word.length
+    }
+  }
+  return longestLength;
+}
+
+function findLongestWord(sentence){
+  let words = sentence.split(" ")
+  let longestWord = ""
+  for(const word of words){
+    if(word.length > longestWord.length){
+      longestWord = word
+    }
+  }
+  return longestWord
+}
+
+console.log(findLongestWordLength("Doyinsola is a Developer"));
+console.log(findLongestWord("Doyinsola is a Developer"));
+
+
