@@ -105,6 +105,7 @@ function initializeThroughput(gates) {
   return summary;
 }
 
+
 function processGateFlow(gate, tickIndex) {
   let currentTickQueue = gate.queue[tickIndex];
   let processed = 0;
