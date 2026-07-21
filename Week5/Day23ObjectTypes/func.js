@@ -59,4 +59,72 @@ console.log(typeof myName);
  
  
  
- 
+//  Working with Arrays, Variables, and Naming Practices
+
+// What Are Some Common Practices for Naming Variables and Functions?
+
+let isLoading = true;
+let hasPermission = false;
+let canEdit = true;
+
+function getUserData(){
+
+}
+function validateInput(){
+
+}
+
+// functions that returns a boolean
+
+function isValidEmail(email) {
+  /* ... */
+}
+
+function hasRequiredFields(form) {
+  /* ... */
+}
+
+// functions that retrieve data it's common to start with the word get:
+
+function getProductDetails(productId) {
+  /* ... */
+}
+
+function getUserProfile(userId) {
+  /* ... */
+}
+
+
+//  functions for event Handler, you might prefix with handle or suffix with handler:
+
+function handleClick(){
+  /* ... */
+}
+
+function onSubmit(){
+  /* ... */
+}
+
+function keyPressHandler(){
+  /* ... */
+}
+
+
+// How Do You Get the Length for an Array, and How Can You Create an Empty Array of Fixed Length?
+const sparseArray = [1,,,4];
+console.log(sparseArray.length);
+
+const emptyArray = new Array(7);
+console.log(emptyArray);
+console.log(emptyArray.length);
+
+
+const fixedLengthArray = Array.from({length : 4})
+console.log(fixedLengthArray);
+console.log(fixedLengthArray.length);
+
+const filledArray = new Array(4).fill(0);
+console.log(filledArray);
+console.log(filledArray.length);
+
+
