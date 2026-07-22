@@ -79,3 +79,14 @@ console.log(largestOfAll([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [100
  
 
  console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0}))
+
+
+//  Implement the Slice and Splice Algorithm
+
+ function frankenSplice(arr1, arr2, index){
+  let copy1 = [...arr1]
+  let copy2 = [...arr2]
+  copy2.splice(index,0,...copy1);
+  return copy2
+}  
+console.log(frankenSplice([1, 2, 3], [4, 5], 1) )
