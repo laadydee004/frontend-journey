@@ -46,3 +46,18 @@ function reverseString(str){
 
 console.log(reverseString("hello"));
 
+
+// Build the Largest Number Finder
+function largestOfAll(arr){
+  let largestNumbers = []
+  for(let i = 0; i < arr.length; i++){
+        let max = Math.max(...arr[i]);
+          
+    largestNumbers.push(max)
+       
+  }
+  return largestNumbers
+}
+
+
+console.log(largestOfAll([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]))
