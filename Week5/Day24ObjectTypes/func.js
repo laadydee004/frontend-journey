@@ -113,3 +113,60 @@ function pyramid(str, num, bool){
 }
  
 console.log(pyramid("o", 4, true))  
+
+
+
+// Build a Gradebook App
+
+function getAverage(scores){
+let average = 0;
+for(let i = 0; i < scores.length; i++){
+  average += (scores[i]) 
+}
+return average / scores.length
+} 
+
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]))
+
+function getGrade(score){
+  let grade = ""
+  if(score === 100){
+    grade = "A+"
+  }else if(score >= 90 && score < 100 ){
+    grade = "A"
+  }else if(score >= 80 && score < 90 ){
+    grade = "B"
+  }else if(score >= 70 && score < 80 ){
+    grade = "C"
+  }else if(score >= 60 && score < 70 ){
+    grade = "D"
+  }else if(score >= 0 && score < 60 ){
+    grade = "F"
+  }
+  return grade
+}
+console.log(getGrade(81))
+
+
+function hasPassingGrade(score){
+  let gradeCheck = true
+  if(getGrade(score) === "F"){
+    gradeCheck = false
+  }
+  return gradeCheck
+}
+console.log(hasPassingGrade(55))
+
+
+function studentMsg(scores,score){
+  let message = ""
+  if(getGrade(score) === "F"){
+   message = `Class average: ${getAverage(scores)}. Your grade: ${getGrade(score)}. You failed the course.`
+  } else{
+   message = `Class average: ${getAverage(scores)}. Your grade: ${getGrade(score)}. You passed the course.`
+  }
+
+  return message
+}
+
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 100))
