@@ -22,3 +22,17 @@ function titleCase(str){
  
 console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT")) 
 
+// Implement a Falsy Remover
+function bouncer(arr){
+   let notFalsy = []
+  for(let list of arr){
+    if(list){
+      notFalsy.push(list)
+    }
+    
+  }
+  return notFalsy
+}
+
+console.log(bouncer([7, "ate", "", false, 9]))
+console.log(bouncer([false, null, 0, NaN, undefined, ""])) 
