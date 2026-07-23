@@ -84,9 +84,32 @@ console.log(largestOfAll([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [100
 //  Implement the Slice and Splice Algorithm
 
  function frankenSplice(arr1, arr2, index){
-  let copy1 = [...arr1]
-  let copy2 = [...arr2]
+  let copy1 = arr1.slice();
+  let copy2 = arr2.slice();
   copy2.splice(index,0,...copy1);
   return copy2
 }  
 console.log(frankenSplice([1, 2, 3], [4, 5], 1) )
+
+
+// Build a Pyramid Generator
+
+function pyramid(str, num, bool){
+  let result = "\n"
+  for(let i = 0; i < num; i++){
+    if(bool === false){
+     result += (" ".repeat(num - i -1) + str.repeat(2 * i + 1) + "\n")
+
+    }
+  }
+   for(let i = num -1 ; i >= 0; i--){
+    if(bool){
+      
+     result += (" ".repeat(num - i -1) + str.repeat(2 * i + 1) + "\n")
+
+    }
+   }
+   return  result
+}
+ 
+console.log(pyramid("o", 4, true))  
