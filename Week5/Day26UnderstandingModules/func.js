@@ -31,3 +31,18 @@ function generatePassword(passwordLength){
 }
 let password = generatePassword(8)
  console.log(`Generated password: ${password}`)
+
+
+//  Design a Sum All Numbers Algorithm
+function sumAll(values){
+  let result = 0
+  let start = Math.min(values[0],values[1])
+  let end = Math.max(values[0], values[1])
+
+  for(let i = start; i <= end; i++){
+    result += i
+  }
+  return result
+}
+
+console.log(sumAll([4, 1]))
