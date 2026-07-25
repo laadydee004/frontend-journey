@@ -56,4 +56,26 @@ function convertHTML (str){
 }
 console.log(convertHTML("Dolce & Gabbana"))
 
+
+// Build an Odd Fibonacci Sum Calculator
+
+function sumFibs(number) {
+  let sum = 0;
+
+  let prev = 0;
+  let curr = 1;
+
+  while (curr <= number) {
+
+    if (curr % 2 !== 0) {
+      sum += curr
+    }
+    let next = curr + prev;
+    prev = curr;
+    curr = next
+  }
+
+  return sum;
+}
+console.log(sumFibs(1000))
  
