@@ -161,3 +161,22 @@ function destroyer(array,...argument){
  return array.filter((item) => !argument.includes(item))
 }
 console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+
+// Implement a Matching Object Filter
+
+function whatIsInAName(array,source){  
+  return array.filter((arr) => {
+    for(let prop in source){
+    if(arr[prop] !== source[prop]){
+      return false
+    }
+    }
+    return true
+  })
+  
+} 
+
+console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }))
+
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], {last: "Capulet" }))
