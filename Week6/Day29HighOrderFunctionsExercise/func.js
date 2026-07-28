@@ -180,3 +180,31 @@ console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1,
 
 
 console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], {last: "Capulet" }))
+
+
+
+// Implement a Range-Based LCM Calculato
+function smallestCommons(arr){
+  let result = []
+  let min = Math.min(arr[0],arr[1]);
+  let max = Math.max(arr[0],arr[1]);
+  for(let i = min; i <= max; i++){
+    result.push(i)
+  }
+  let start = max;
+  while(true){
+    let divisible = true;
+     for(let i = 0; i < result.length; i++){
+    if(start % result[i] !== 0){
+      divisible = false
+    }
+  }
+    if(divisible){
+      return start
+    }
+    start++;
+  }
+ 
+}
+
+console.log(smallestCommons([1, 5]))
