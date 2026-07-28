@@ -124,3 +124,20 @@ const books = [
 
   filteredBooks.sort(sortByYear);
   console.log(filteredBooks); 
+
+//   Implement a Sorted Index Finder
+
+function getIndexToIns(array,num){
+  array.sort((a,b) => (a - b))
+ let index = array.findIndex((arr) => (arr >= num))
+ if(index === -1){
+  return array.length
+ }
+
+  return index
+ 
+}
+
+console.log(getIndexToIns([10, 20, 40, 30, 50], 35))
+console.log(getIndexToIns([105, 20, 40, 30, 50], 35))
+console.log(getIndexToIns([3, 10, 5], 11))
