@@ -141,3 +141,16 @@ function getIndexToIns(array,num){
 console.log(getIndexToIns([10, 20, 40, 30, 50], 35))
 console.log(getIndexToIns([105, 20, 40, 30, 50], 35))
 console.log(getIndexToIns([3, 10, 5], 11))
+
+
+// Build a Symmetric Difference Function
+
+function diffArray(arr1, arr2){
+
+ let first = arr1.filter((item) => !arr2.includes(item))
+ let second = arr2.filter((item) => !arr1.includes(item))
+ return [...first, ...second]
+
+}
+console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+console.log(diffArray(["pen", "book"], ["book", "pencil", "notebook"])) 
