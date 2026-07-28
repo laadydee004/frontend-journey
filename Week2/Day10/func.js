@@ -12,7 +12,7 @@ function addLunchToStart(lunches,string1){
   lunches.unshift(string1)
   console.log(`${string1} added to the start of the lunch menu.`)
      return lunches
-}
+}]
 console.log(addLunchToStart(["Pizza","Tacos"],string1));
 
 function removeLastLunch(lunches) {

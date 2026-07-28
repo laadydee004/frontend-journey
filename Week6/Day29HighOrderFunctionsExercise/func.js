@@ -154,3 +154,10 @@ function diffArray(arr1, arr2){
 }
 console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
 console.log(diffArray(["pen", "book"], ["book", "pencil", "notebook"])) 
+
+// Implement a Value Remover Function
+
+function destroyer(array,...argument){
+ return array.filter((item) => !argument.includes(item))
+}
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
