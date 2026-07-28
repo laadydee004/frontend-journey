@@ -87,3 +87,40 @@ function getTotalPages(catalog){
 }
 
 console.log(getTotalPages(library))
+
+
+// Build a Book Organizer
+
+const books = [
+  {
+    title: "Things Fall Apart",
+    authorName: "Chinua Achebe",
+    releaseYear: 1940
+  },
+  {
+    title: "Half of a Yellow Sun",
+    authorName: "Chimamanda Ngozi Adichie",
+    releaseYear: 2006 
+  },
+  {
+    title: "Harry Potter and the Philosopher's Stone",
+    authorName: "J.K. Rowling",
+    releaseYear: 1997
+  }
+  ]
+
+  function sortByYear(a,b){
+      if(a.releaseYear < b.releaseYear){
+        return -1
+      }
+     else if(a.releaseYear > b.releaseYear){
+        return 1
+      }
+      else {
+        return 0
+      }
+  }
+  const filteredBooks = books.filter((book) => book.releaseYear <= 1950)
+
+  filteredBooks.sort(sortByYear);
+  console.log(filteredBooks); 
