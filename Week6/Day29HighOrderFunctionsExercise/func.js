@@ -229,3 +229,30 @@ function steamrollArray(nestedArr){
 console.log(steamrollArray([[["a"]], [["b"]]]))
 
 console.log(steamrollArray([1, [2], [3, [[4]]]]))  
+
+
+
+// Build an All-True Property Validator
+
+function truthCheck(collection, pre) {  
+   for(let object of collection ){
+    if(!object[pre]){
+      return false
+    }
+   }
+
+    return true;
+} 
+
+console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot"));
+
+
+console.log(
+  truthCheck(
+    [
+      { name: "Alice", role: "Admin" },
+      { name: "Bob", role: "Dev" }
+    ],
+    "role"
+  )
+);
