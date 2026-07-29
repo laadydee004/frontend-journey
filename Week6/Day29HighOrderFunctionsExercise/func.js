@@ -183,7 +183,7 @@ console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercu
 
 
 
-// Implement a Range-Based LCM Calculato
+// Implement a Range-Based LCM Calculator
 function smallestCommons(arr){
   let result = []
   let min = Math.min(arr[0],arr[1]);
@@ -197,14 +197,35 @@ function smallestCommons(arr){
      for(let i = 0; i < result.length; i++){
     if(start % result[i] !== 0){
       divisible = false
+      break;
     }
   }
     if(divisible){
       return start
     }
-    start++;
+    start += max
   }
  
 }
 
 console.log(smallestCommons([1, 5]))
+
+// Create a Deep Flattening Tool
+
+function steamrollArray(nestedArr){ 
+  let result = []
+  for(let i = 0; i < nestedArr.length; i++){
+    if(Array.isArray(nestedArr[i])){
+     let value = steamrollArray(nestedArr[i])
+     result.push(...value)
+    }else{
+      result.push(nestedArr[i])
+    }
+    
+  }
+  return result
+}
+
+console.log(steamrollArray([[["a"]], [["b"]]]))
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]))  
