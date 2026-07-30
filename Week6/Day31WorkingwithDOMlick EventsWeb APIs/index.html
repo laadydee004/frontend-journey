@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 31 Working with the DOM, Click Events, and Web APIs
+</title>
+<style>
+    .btn2{
+        background: linear-gradient(135deg, #4da3ff, #6116a7);
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 10px 10px rgba(25, 26, 24, 0.2);
+    }
+    .highlight{
+        color: rgb(0, 255, 60);
+    }
+    .dev{
+        color: rgb(139, 28, 203);
+    }
+    .menu{
+        display: none;
+        color: rgba(0, 0, 0, 0.737);
+        padding: 10px;
+    }
+    .menu li {
+        padding: 5px;
+        list-style-type: none;
+    }
+    .menu.show{
+
+        display: block;
+    }
+    .message {
+        display: none;
+        width: 250px;
+        font-size: 25px;
+        color: blue;
+        padding: 15px 20px;
+        text-align: center;
+        background-color: #4da3ff;
+        border-radius: 10px;
+       position: relative;
+       bottom: 500px;
+       left: 400px;
+    }
+    .message.show {
+        display: block;
+    }
+    body {
+  overflow-x: hidden;
+}
+.rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  border-radius: 5px;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-size: 2rem;
+  position: absolute;
+}
+</style>
+</head>
+<body>
+    
+    <p id ="para">I'm a paragraph</p>
+    <div class="secOne">Welcome back Doyinsola</div>
+
+    <button id="btn">Show Alert</button>
+    <input type="text" id="input" placeholder="Type something" />
+    <h1>Event Listener examples</h1>
+    <p id="parag">MouseOver this text to remove the event listener</p>
+    <button class="btn2" id="btn2">Change background color</button>
+
+    <button id="btn3">Login</button>
+
+    <p class="colorRed">i am a color</p>
+     <p id="para2">i will add hightlight class to the paragraph from javascript </p>
+
+
+     <div>
+        <button id="toggle-btn">toggle</button>
+        <nav id="menu" class="menu">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+     </div>
+     <div>
+        <img id="example-img" src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="strawberry img">
+     </div>
+     <div id="welcome-message" class="message">
+        <p>it's a pleasure to have you here you are welcome, Click the contact button if you needs any help</p>
+     </div>
+     
+     <div class="body">
+        <div id="rect" class="rect">freeCodeCamp is Awesome</div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./func.js"></script>
+</body>
+</html>
