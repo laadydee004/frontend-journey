@@ -58,17 +58,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 250px;
+  width: 24rem;
+  aspect-ratio: 1/1;
   border-radius: 5px;
   background-color: #1b1b32;
   color: #f5f6f7;
   font-size: 2rem;
   position: absolute;
 }
+.square{
+    width: 15rem;
+    background-color: #6116a7;
+     aspect-ratio: 1/1;
+    /* height: 10rem;
+    padding: 10px; */
+    border-radius: 50px;
+}
+.body1{
+      background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.body2{
+   
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.square2{
+    margin: 20px;
+    border-radius: 20px;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    background: yellowgreen;
+}
+.body2 button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: rgb(104, 36, 104);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
 </style>
 </head>
 <body>
+    <div class="body">
+        <div id="rect" class="rect">freeCodeCamp is Awesome</div>
+     </div>
+
     
     <p id ="para">I'm a paragraph</p>
     <div class="secOne">Welcome back Doyinsola</div>
@@ -102,15 +145,36 @@
         <p>it's a pleasure to have you here you are welcome, Click the contact button if you needs any help</p>
      </div>
      
-     <div class="body">
-        <div id="rect" class="rect">freeCodeCamp is Awesome</div>
+     
+     <div class="body1">
+        <div class="square" id="square"></div>
      </div>
 
 
+     <div class="body2">
+        <div class="square2"></div>
+
+        <button id="playBtn">play</button>
+        <button id="pauseBtn">pause</button>
+     </div>
+
+
+     <canvas id="my-canvas"></canvas>
+
+     <canvas id="my-text-canvas" width="300" height="70"></canvas>
+
+
+     <dialog id="my-modal">
+        <p>This is a modal dialog.</p>
+     </dialog>
 
 
 
-
+     <dialog id="modal2">
+        <p>This is a modal dialog.</p>
+     </dialog>
+     <button id="open-modal-btn">Open Modal Dialog</button>
+     <button id="close-modal-btn">Close Modal Dialog</button>
 
 
 

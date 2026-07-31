@@ -159,3 +159,90 @@ function animate() {
     requestAnimationFrame(animate);
 }
 requestAnimationFrame(animate);
+
+
+// What Is the Web Animations API, and How Does It Relate to CSS Animation Properties?
+// instance -play(),pause(),reverse(),finish(),cancel()
+// prop -playbackRate,currentTime,startTime,effect,timeline,playState,finished,onfinish,oncancel
+const square = document.getElementById("square");
+const animation = square.animate(
+    [{transform: "translateX(0rem)"},{transform: "translateX(30rem)"}],
+    {
+        duration: 2000, // makes the animation last 2 seconds
+        iterations: Infinity,  // loops indefinitely
+        direction: "alternate",  // moves back and forth
+        easing: "ease-in-out"        //smooth easing
+    }
+)
+
+
+const square2 = document.querySelector(".square2");
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+
+const animation2 = square2.animate([{transform: "translateX(0px)"},{transform:"translateX(200px)"}],
+    {
+        // iterations: 5000,
+        duration: 5000,
+        direction: "alternate",
+        easing: "ease-in-out"
+    }
+);
+
+animation2.pause();
+playBtn.addEventListener("click",() => {
+    animation2.play();
+    console.log("You start the animation");
+});
+
+pauseBtn.addEventListener("click",() => {
+    animation2.pause();
+    console.log("You pause the animation");
+})
+
+animation2.onfinish = () => {
+    console.log("Animation finished!");
+}
+
+
+// What Is the Canvas API, and How Does It Work?
+const myCanvas = document.getElementById("my-canvas");
+myCanvas.height = 300;
+myCanvas.width = 300;
+
+const ctx = myCanvas.getContext("2d");
+console.log(ctx);
+ctx.fillStyle = "red";
+ctx.fillRect(1, 1, 150, 100);
+
+
+
+const textCanvas = document.getElementById("my-text-canvas");
+
+const textCanvasCtx = textCanvas.getContext("2d");
+
+// Set font family and size
+textCanvasCtx.font = "30px Arial";
+
+// Set text color
+textCanvasCtx.fillStyle = "crimson";
+
+// Draw the text
+textCanvasCtx.fillText("Hello HTML Canvas!", 1, 50);
+
+
+// How Do You Open and Close Dialog Elements Using JavaScript?
+// const modal = document.getElementById("my-modal");
+// modal.showModal()
+
+
+const dialog = document.getElementById("modal2");
+const closeBtn = document.getElementById("close-modal-btn");
+const openBtn = document.getElementById("open-modal-btn");
+
+closeBtn.addEventListener("click",() =>{
+    dialog.close()
+})
+openBtn.addEventListener("click",() =>{
+    dialog.show()
+})
