@@ -1,0 +1,36 @@
+.main-container{
+    background: #0A0A23;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding:15px;
+}
+.allBtn button{
+    width: 250px;
+    display: block;
+    padding: 15px;
+    margin: 10px;
+   font-size: 25px;
+    color: white;
+    background:  #B7A3FC;
+    border-radius: 10px;
+    border: 3px solid  #6041B0;  
+    cursor: pointer;
+    transition: transform 0.2s ease;
+      
+}
+.allBtn button:hover {
+  transform: scale(1.03);
+  background-color: #6041B0;
+}
+
+.allBtn{
+    display: flex;
+    justify-content: center;
+}  
+
+@media (max-width:700px) {
+    .main-container{
+        font-size: 15px;
+    }
+}
