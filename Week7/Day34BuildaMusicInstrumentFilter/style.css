@@ -1,0 +1,39 @@
+.selectMenu{
+    padding: 15px 100px 10px 15px;
+}
+.all-instruments h1{
+    color: white;
+}
+.products-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.Instruments p {
+    font-size: 30px;
+    font-weight: 900;
+    background-color: white;
+    border: 5px solid #F1BE32;
+    width: 200px;
+    text-align: start;
+    padding: 10px;
+    border-radius: 10px;
+}
+.Instruments span{
+    font-weight: 100;
+    font-size: 20px;
+    display: block;
+}
+.all-instruments{
+    padding: 30px;
+    background-color: #0A0A23;
+    text-align: center;
+}
+
+@media (max-width: 730px) {
+    .Instruments {
+        flex-direction: column;
+        align-items: center;
+    }
+}
