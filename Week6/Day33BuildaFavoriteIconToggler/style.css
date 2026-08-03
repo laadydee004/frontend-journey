@@ -1,0 +1,29 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+.main-container ul li {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    
+}
+
+
+.main-container button{
+    cursor: pointer;
+    font-size: 25px;
+    border: none;
+    background-color: white;
+}
+
+
+
+.main-container .show{
+    color: red;
+}
+
+
+
