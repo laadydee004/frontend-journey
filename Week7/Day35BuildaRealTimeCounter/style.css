@@ -1,0 +1,24 @@
+.main-container{
+    background: rgb(114, 89, 227);
+    text-align: center;
+    padding: 20px;
+}
+.text-area textarea{
+    width: 300px;
+    aspect-ratio: 2/1;
+    background: white;
+    margin: 0 auto ;
+    border-radius: 20px;
+    padding: 15px;
+    border: none;
+}
+.count{
+    color: red;
+    font-size: 20px;
+}
+
+@media (max-width: 720px) {
+    .text-area textarea{
+        width: 170px;
+    }
+}
