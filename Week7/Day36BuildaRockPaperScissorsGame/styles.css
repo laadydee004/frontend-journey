@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0A23;
+    text-align: center;
+}
+.main-container h1 {
+    padding: 20px;
+    color: white;
+}
+.rules-btn-container{
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    border: 5px solid #F1BE32;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+.rules-btn-container .rules{
+    padding: 10px;
+    display: none;
+}
+.rules.show{
+    display: block;  
+}
+.score{
+    padding: 20px;
+    font-weight: 600;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    width: 600px;
+    margin: auto;
+}
+.options-container h2{
+    padding: 20px;
+    color: white;
+}
+.options-container button, #reset-game-btn{
+    margin: 10px;
+    background: #FEC043;
+    padding: 4px 35px ;
+    border-radius: 5px;
+    box-shadow:  0 1px 2px #f4b639;
+}
+
+.options-container button:hover{
+    background-color: #f4b639;
+}
+.mes{
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 10px;
+}
+#reset-game-btn {
+    display: none;
+}
+.results-msg{
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+}
+@media (max-width: 720px) {
+    .rules-btn-container{
+        width:85%;
+        max-width: 500px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .score{
+        width: 85%;
+    }
+
+}
