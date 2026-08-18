@@ -1,0 +1,504 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(9, 9, 52);
+    font-family: Arial, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.all {
+    padding-right: 20px;
+    display: flex;
+    gap: 20px;
+    background-color: rgb(9, 9, 52);
+}
+
+
+/* NAVIGATION */
+
+.navigation-bar {
+    color: white;
+    background: #2d283a;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.navigation-bar .logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navigation-bar .logo span {
+    color: #4ddddd;
+}
+
+.navigation-bar ul {
+    text-align: left;
+}
+
+.navigation-bar ul li {
+    list-style: none;
+    padding: 15px 10px;
+}
+
+.navigation-bar a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* MAIN */
+
+main {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* HEADER */
+
+header {
+    color: white;
+    display: flex;
+    background-color: rgb(9, 9, 52);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    gap: 20px;
+}
+
+.search-bar {
+    padding: 2px;
+    display: flex;
+    border: 1px solid rgb(197, 188, 188);
+    border-radius: 20px;
+}
+
+.search-bar input {
+    margin: 8px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(9, 9, 52);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.search-bar span {
+    color: white;
+    background: linear-gradient(
+        rgb(132, 210, 210),
+        rgb(54, 33, 174)
+    );
+    text-align: center;
+    width: 60px;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+
+/* MOBILE SEARCH BAR */
+
+.nav-search-bar {
+    display: none;
+}
+
+.league-filter,
+.profile-notification {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.league-filter a {
+    color: white;
+    text-decoration: none;
+}
+
+.league-filter select {
+    background-color: rgb(9, 9, 52);
+    color: white;
+    border: none;
+}
+
+
+/* TEAM SUMMARY */
+
+.content {
+    gap: 20px;
+    background-color: rgb(9, 9, 52);
+}
+
+
+.team-content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.team-content p {
+    color: white;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    background: linear-gradient(
+        rgb(13, 13, 87),
+        rgb(31, 63, 63)
+    );
+}
+
+.team-content p span {
+    font-size: 40px;
+    display: block;
+    margin-top: 5px;
+}
+
+.add-team {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.add-team span {
+    background-color: rgb(147, 98, 6);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/* PLAYER FILTER */
+
+.player-position {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.player-position p {
+    margin: 20px 0;
+    width: 120px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: #06061e;
+}
+
+
+/* PLAYER GRID */
+
+.players-info {
+    border-radius: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.player-card {
+    color: rgb(234, 227, 227);
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgb(50, 43, 67);
+    box-shadow: 0 8px 20px rgba(18, 11, 46, 0.4);
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.player-card:hover {
+    border: 1px solid rgb(198, 217, 231);
+    transform: translateY(-5px);
+}
+
+.player-card img {
+    width: 100%;
+    border-radius: 20px;
+    aspect-ratio: 6 / 8;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.player-card img:hover {
+    transform: scale(1.03);
+}
+
+.sidebar {
+    display: none;
+    width: 300px;
+    color: white;
+}
+.sidebar img{
+    width: 100%;
+    
+}
+
+
+/* MENU */
+
+.menu-bar {
+    display: none;
+}
+
+.menu-content.show {
+    display: block;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .players-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .all {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .navigation-bar {
+        width: 100%;
+        padding: 15px 10px;
+        margin: 0;
+        background-color: #2d283a;
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .nav-search-bar {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        min-width: 0;
+        width: auto;
+        height: 40px;
+        padding: 4px;
+        margin: 0;
+        border: 1px solid rgb(197, 188, 188);
+        border-radius: 15px;
+        background-color: #2d283a;
+    }
+
+    .nav-search-bar input {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        margin: 0;
+        padding: 5px 8px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #2d283a;
+    }
+
+    .nav-search-bar input::placeholder {
+        color: rgb(190, 190, 190);
+    }
+
+    .nav-search-bar span {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: linear-gradient(
+            rgb(132, 210, 210),
+            rgb(54, 33, 174)
+        );
+        border-radius: 10px;
+    }
+
+    .menu-bar {
+        display: block;
+        flex: 0 0 auto;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .menu-bar span {
+        font-size: 28px;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .menu-content {
+        display: none;
+    }
+
+    .menu-content.show {
+        display: block;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main.dashboard {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    header {
+        display: none;
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .content {
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        background-color: rgb(9, 9, 52);
+    }
+
+
+    /* =========================
+       TEAM SUMMARY
+    ========================= */
+
+    .team-builder {
+        width: 100%;
+    }
+
+    .team-content {
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+
+    .team-content p {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .team-content p span {
+        font-size: 24px;
+    }
+
+
+    /* =========================
+       PLAYER FILTER
+    ========================= */
+
+    .player-position {
+        width: 100%;
+        display: flex;
+        gap: 4px;
+        padding: 0 5px;
+    }
+
+    .player-position p {
+        flex: 1;
+        width: auto;
+        margin: 5px 0;
+        padding: 8px 3px;
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       PLAYER GRID
+    ========================= */
+
+    .players-info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .player-card {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .player-card img {
+        width: 100%;
+        aspect-ratio: 6 / 8;
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    .sidebar {
+        display: none;
+    }
+}
