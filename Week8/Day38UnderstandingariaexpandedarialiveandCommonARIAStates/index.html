@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Do You Make Dynamic and Interactive Content Accessible?</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+   <button id="menuButton" aria-expanded="false" aria-controls="menuList">
+  Menu
+</button>
+<ul id="menuList" hidden>
+  <li>List item 1</li>
+  <li>List item 2</li>
+</ul>
+
+
+<button class="button2" aria-expanded="false" aria-controls="menu2" >Menu2</button>
+<ul id="menu2" hidden>
+    <li>Home</li>
+    <li>Dashbosrd</li>
+    <li>Services</li>
+</ul>
+
+
+<button class="button3" aria-owns="menu3" aria-expanded="true">menu3</button>
+<ul id="menu3" hidden>
+    <li>Home</li>
+    <li>Dashbosrd</li>
+    <li>Services</li>
+    <li>contact</li>
+</ul>
+<div class="session-warning" aria-live="assertive">
+  <p>Your session will expire in 30 seconds.</p>
+</div>
+<div class="upload-success" aria-live="polite">
+  <p>File successfully uploaded</p>
+</div>
+<div role="tablist">
+  <button role="tab" aria-selected="true">Tab 1</button>
+  <button role="tab" aria-selected="false">Tab 2</button>
+  <button role="tab" aria-selected="false">Tab 3</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

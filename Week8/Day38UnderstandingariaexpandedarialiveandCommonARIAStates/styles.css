@@ -1,0 +1,77 @@
+.session-warning {
+  background-color: #ffcc00;
+  color: #000;
+  font-family: system-ui, sans-serif;
+  font-weight: 500;
+  padding: 1em 1.5em;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.session-warning.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.session-warning.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.upload-success{
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform o.5s ease;
+}
+
+.upload-success.visible{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+.upload-success.fade-out{
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+[role="tablist"]{
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  gap: 0.25rem;
+  font-family: system-ui, sans-serif;
+}
+
+[role="tab"] {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #444;
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+[role="tab"]:hover {
+  background-color: #f3f3f3;
+}
+
+[role="tab"][aria-selected="true"] {
+  background-color: #fff;
+  color: #0078d4;
+  border: 2px solid #0078d4;
+  border-bottom: 2px solid #fff; 
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+
