@@ -1,0 +1,14 @@
+.main{
+    background: linear-gradient(violet,rgb(176, 14, 176));
+    width: 300px;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+
+}
+
+#result{
+    color: white;
+    font-size: 32px;
+}
